@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Calendar cell styling */
+td {
+  position: relative;
+  min-width: 120px;
+}
+
+/* Event block styling */
+.event-block {
+  height: calc(100% - 1.5rem);
+}
