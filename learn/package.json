@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages@1 build",
-    "preview": "wrangler pages dev .vercel/output/static",
-    "deploy": "wrangler pages deploy .vercel/output/static"
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
@@ -26,4 +26,5 @@
     "eslint-config-next": "15.3.2",
     "tailwindcss": "^4"
   }
+ 
 }
