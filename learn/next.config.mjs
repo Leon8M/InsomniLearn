@@ -2,6 +2,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    runtime: 'experimental-edge'
+  }
   
 };
 if (process.env.NODE_ENV === 'development') {
