@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { supabase } from '../../lib/supabase'
+export const runtime = "edge";
 
 export default function RSVPForm({ classId }) {
   const [formData, setFormData] = useState({

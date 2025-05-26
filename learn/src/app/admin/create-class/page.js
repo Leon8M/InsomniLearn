@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../../../app/lib/supabase'
 import { useRouter, useSearchParams } from 'next/navigation'
+export const runtime = "edge";
 
 export default function CreateClass() {
   const searchParams = useSearchParams()

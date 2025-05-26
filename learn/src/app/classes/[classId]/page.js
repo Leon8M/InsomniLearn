@@ -3,6 +3,7 @@ import { supabase } from '../../../app/lib/supabase'
 import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import RSVPForm from './RSVPForm'
+export const runtime = "edge";
 
 export default function ClassPage() {
   const params = useParams()

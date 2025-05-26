@@ -1,5 +1,6 @@
 import { supabase } from '../../lib/supabase'
 import { redirect } from 'next/navigation'
+export const runtime = "edge";
 
 export default async function AdminDashboard({ searchParams }) {
   // Properly await searchParams access

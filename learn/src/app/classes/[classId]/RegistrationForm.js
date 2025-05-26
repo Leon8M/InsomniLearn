@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+export const runtime = "edge";
 
 export default function RegistrationForm({ classId }) {
   const [email, setEmail] = useState('')

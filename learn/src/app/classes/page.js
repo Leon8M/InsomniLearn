@@ -1,5 +1,6 @@
 import { supabase } from '../lib/supabase'
 import Link from 'next/link'
+export const runtime = "edge";
 
 export const revalidate = 0
 
