@@ -69,9 +69,9 @@ export default function RSVPForm({ classId }) {
             onChange={(e) => setFormData({...formData, attendance_status: e.target.value})}
             className="w-full p-2 border rounded"
           >
-            <option value="attending">Yes, I'll be there</option>
+            <option value="attending">Yes, I&apos;ll be there</option>
             <option value="maybe">Maybe</option>
-            <option value="not_attending">No, I can't attend</option>
+            <option value="not_attending">No, I can&apos;t attend</option>
           </select>
         </div>
         <button
