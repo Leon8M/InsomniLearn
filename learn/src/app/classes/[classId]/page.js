@@ -13,13 +13,16 @@ export default function ClassPage() {
 
   function formatLocalDateTime(isoString) {
   const date = new Date(isoString);
+
+  // Format in UTC so time doesn't shift
   return date.toLocaleString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+    hour12: true,
+    timeZone: 'UTC'
   });
 }
 
