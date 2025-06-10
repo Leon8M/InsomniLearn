@@ -113,7 +113,7 @@ export default function Home() {
     return weeks
   }
 
-  const formatEventDate = (dateString) => {
+  const formatEventDate = (isoString) => {
     const date = new Date(isoString);
     return date.toLocaleString('en-US', {
     year: 'numeric',
