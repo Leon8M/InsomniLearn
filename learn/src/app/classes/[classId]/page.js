@@ -11,6 +11,18 @@ export default function ClassPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  function formatLocalDateTime(isoString) {
+  const date = new Date(isoString);
+  return date.toLocaleString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+  });
+}
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,7 +54,7 @@ export default function ClassPage() {
       <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
         <h1 className="text-3xl font-bold">{classData.title}</h1>
         <p className="mt-2 text-gray-600">
-          {new Date(classData.date).toLocaleString()}
+        {formatLocalDateTime(classData.date)}
         </p>
         <div className="mt-4">
           <h2 className="text-xl font-semibold">Description</h2>
