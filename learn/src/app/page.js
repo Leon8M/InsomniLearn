@@ -114,13 +114,14 @@ export default function Home() {
   }
 
   const formatEventDate = (dateString) => {
-    const date = new Date(dateString)
-    return date.toLocaleString('default', { 
-      weekday: 'short', 
-      month: 'short', 
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+    const date = new Date(isoString);
+    return date.toLocaleString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
     })
   }
 
